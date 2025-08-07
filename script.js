@@ -1,53 +1,20 @@
-<<<<<<< HEAD
-const text = "ABDULLAH KHAN";
-const target = document.getElementById("typewriter");
-let index = 0;
+// Typewriter effect for hero section
+const typewriterText = "Abdullah Khan";
+let i = 0;
+const speed = 100;
 
 function typeWriter() {
-  if (index <= text.length) {
-    target.innerHTML = text.substring(0, index++);
-    setTimeout(typeWriter, 150);
-  } else {
-    setTimeout(() => {
-      target.innerHTML = "";
-      index = 0;
-      typeWriter();
-    }, 1000);
+  if (i < typewriterText.length) {
+    document.getElementById("typewriter").textContent += typewriterText.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
   }
 }
 
-window.onload = typeWriter;
-const elements = document.querySelectorAll('.section');
-
-window.addEventListener('scroll', () => {
-  elements.forEach(el => {
-    const rect = el.getBoundingClientRect();
-    const isVisible = rect.top < window.innerHeight - 100 && rect.bottom > 0;
-
-    if (isVisible) {
-      el.classList.add('visible');
-    } else {
-      el.classList.remove('visible');
-    }
-  });
+window.addEventListener("load", () => {
+  const typewriterElement = document.getElementById("typewriter");
+  if (typewriterElement) {
+    typewriterElement.textContent = "";
+    typeWriter();
+  }
 });
-=======
-const text = "ABDULLAH KHAN";
-const target = document.getElementById("typewriter");
-let index = 0;
-
-function typeWriter() {
-  if (index <= text.length) {
-    target.innerHTML = text.substring(0, index++);
-    setTimeout(typeWriter, 150);
-  } else {
-    setTimeout(() => {
-      target.innerHTML = "";
-      index = 0;
-      typeWriter();
-    }, 1000);
-  }
-}
-
-window.onload = typeWriter;
->>>>>>> 88d076b968759457f3e4aa35ab6f40c4fd68f022
