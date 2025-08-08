@@ -23,10 +23,6 @@ body::before {
   z-index: -1;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 /* Header Styling */
 header.hero {
   background: url("bg.jpg") center center / cover no-repeat;
@@ -41,10 +37,8 @@ header.hero {
 header.hero::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
   background: rgba(0, 0, 0, 0.4);
   z-index: 0;
 }
@@ -104,10 +98,8 @@ header.hero::before {
   color: #fff89c;
   padding: 1.5rem 0;
   line-height: 1.8;
-  border: none;
 }
 
-/* Bio section layout */
 .bio-section {
   position: relative;
   padding-bottom: 20px;
@@ -167,9 +159,7 @@ header.hero::before {
 }
 
 .skill-category li:hover {
-  transform: translateX(5px);
-  background: linear-gradient(90deg, #ff1a1a, #ff4c4c);
-  color: white;
+  background-color: #ff4c4c;
   border-left-color: #ff1a1a;
   cursor: pointer;
 }
@@ -182,29 +172,21 @@ header.hero::before {
   margin-bottom: 1rem;
 }
 
-/* Make only Resume and Contact Headings red */
-.section:nth-of-type(3) h2,
-.section:nth-of-type(4) h2,
 #resume h2,
 #contact h2 {
   color: #ff4c4c;
-  font-size: 1.4rem;
-  text-shadow: 0 0 6px rgba(255, 76, 76, 0.4);
-  margin-bottom: 0.75rem;
 }
 
 /* Resume Button */
 .resume-button {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  font-size: 0.9rem;
   background: linear-gradient(135deg, #ff4c4c, #ff1a1a);
   color: #fff;
   font-weight: bold;
   border: none;
   border-radius: 8px;
-  text-decoration: underline;
-  text-underline-offset: 4px;
+  text-decoration: none;
   transition: all 0.3s ease;
   box-shadow: 0 4px 12px rgba(255, 76, 76, 0.3);
 }
@@ -215,15 +197,14 @@ header.hero::before {
   box-shadow: 0 6px 16px rgba(255, 76, 76, 0.5);
 }
 
-/* Contact Info */
+/* Contact */
 .contact-info {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 15px;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  font-size: 0.95rem;
   color: #f2f2f2;
+  justify-content: flex-start;
 }
 
 .contact-info a {
@@ -236,10 +217,18 @@ header.hero::before {
   color: #00ff00;
 }
 
-.contact-info a:hover img {
-  transform: scale(1.1);
-  filter: drop-shadow(0 0 5px #00ffe1);
-  transition: all 0.3s ease;
+.divider {
+  color: #888;
+  padding: 0 0.5rem;
+  font-weight: bold;
+}
+
+.icon-img {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 8px;
+  border-radius: 4px;
 }
 
 /* Footer */
@@ -249,36 +238,80 @@ footer {
   background-color: #1a1a1a;
   color: #888;
 }
+/* Resume & Contact Headings (smaller size) */
+#resume h2,
+#contact h2 {
+  font-size: 1.4rem;
+  color: #ff4c4c;
+  margin-bottom: 0.75rem;
+  text-shadow: 0 0 6px rgba(255, 76, 76, 0.4);
+}
 
-/* Divider */
-.divider {
-  color: #888;
-  padding: 0 0.5rem;
+/* Resume Button (smaller and more compact) */
+.resume-button {
+  padding: 0.4rem 0.9rem;
+  font-size: 0.9rem;
+  background: linear-gradient(135deg, #ff4c4c, #ff1a1a);
+  color: #fff;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(255, 76, 76, 0.3);
+}
+
+.resume-button:hover {
+  background: linear-gradient(135deg, #ff1a1a, #ff4c4c);
+  transform: scale(1.04);
+  box-shadow: 0 5px 10px rgba(255, 76, 76, 0.4);
+}
+
+/* Contact Info (smaller font and spacing) */
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 0.95rem;
+}
+
+.contact-info a {
+  color: #00ffe1;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-info a:hover {
+  color: #00ff00;
+}
+.resume-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #ff4c4c, #ff1a1a);
+  color: #fff;
   font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  text-decoration: underline; /* Underline ONLY the button */
+  text-underline-offset: 4px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 76, 76, 0.3);
 }
-
-/* Icons */
-.icon-img {
-  width: 20px;
-  height: 20px;
-  vertical-align: middle;
-  margin-right: 8px;
-  border-radius: 4px;
+html {
+  scroll-behavior: smooth;
 }
-
-/* Section Reveal Animation */
-.section {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+.skill-category li:hover {
+  transform: translateX(5px);
+  background: linear-gradient(90deg, #ff1a1a, #ff4c4c);
+  color: white;
 }
-
-.section.visible {
-  opacity: 1;
-  transform: translateY(0);
+.contact-info a:hover img {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 5px #00ffe1);
+  transition: all 0.3s ease;
 }
-
-/* Responsive Design */
 @media (max-width: 768px) {
   .hero-content h1 {
     font-size: 2rem;
@@ -294,3 +327,4 @@ footer {
     height: 120px;
   }
 }
+

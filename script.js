@@ -1,4 +1,4 @@
-// Typewriter effect for hero section
+
 const typewriterText = "Abdullah Khan";
 let i = 0;
 const speed = 100;
@@ -12,9 +12,9 @@ function typeWriter() {
 }
 
 window.addEventListener("load", () => {
-  const typewriterElement = document.getElementById("typewriter");
-  if (typewriterElement) {
-    typewriterElement.textContent = "";
+  const el = document.getElementById("typewriter");
+  if (el) {
+    el.textContent = "";
     typeWriter();
   }
 });
