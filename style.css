@@ -327,4 +327,49 @@ html {
     height: 120px;
   }
 }
+/* Contact section */
+.contact-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* spacing between items */
+  margin-top: 15px;
+  flex-wrap: wrap; /* mobile friendly */
+}
 
+/* Links */
+.contact-info a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* space between icon and text */
+  transition: color 0.3s ease;
+  color: #fff; /* keep text white */
+}
+
+/* Divider */
+.contact-info .divider {
+  color: #bbb;
+  font-size: 1.2rem;
+}
+
+/* Icons default size */
+.contact-info i {
+  font-size: 1.3rem;
+}
+
+/* Gmail icon = red */
+.contact-info .email i {
+  color: #d14836;
+}
+
+/* LinkedIn icon = blue */
+.contact-info .linkedin i {
+  color: #0077b5;
+}
+
+/* Text hover glow */
+.contact-info a:hover {
+  color: #00e0ff; /* hover color for text */
+}
