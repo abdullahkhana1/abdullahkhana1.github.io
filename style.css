@@ -373,3 +373,30 @@ html {
 .contact-info a:hover {
   color: #00e0ff; /* hover color for text */
 }
+/* Contact Section Icons */
+.contact-info a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: #ffffff; /* default link color */
+  transition: color 0.3s ease;
+}
+
+/* Email icon color */
+.contact-info a.email i {
+  color: #d44638; /* Gmail red */
+  font-size: 1.3rem;
+}
+
+/* LinkedIn icon color */
+.contact-info a.linkedin i {
+  color: #0077b5; /* LinkedIn blue */
+  font-size: 1.3rem;
+}
+
+/* Hover effect */
+.contact-info a:hover {
+  color: #00e0ff; /* text hover glow */
+}
