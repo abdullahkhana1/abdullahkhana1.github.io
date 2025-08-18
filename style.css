@@ -1,4 +1,6 @@
-/* General Body Styling */
+/* =======================
+   General Body Styling
+======================= */
 body {
   margin: 0;
   font-family: 'Orbitron', sans-serif;
@@ -23,7 +25,9 @@ body::before {
   z-index: -1;
 }
 
-/* Header Styling */
+/* =======================
+   Hero Section
+======================= */
 header.hero {
   background: url("bg.jpg") center center / cover no-repeat;
   height: 60vh;
@@ -75,14 +79,22 @@ header.hero::before {
   25%, 75% { opacity: 0; }
 }
 
-/* Container Utility */
+/* =======================
+   Utilities
+======================= */
 .container {
   max-width: 900px;
   margin: auto;
   padding: 2rem;
 }
 
-/* Bio Section */
+html {
+  scroll-behavior: smooth;
+}
+
+/* =======================
+   Bio Section
+======================= */
 .profile-pic {
   display: block;
   margin: 1rem auto;
@@ -111,7 +123,9 @@ header.hero::before {
   margin-right: auto;
 }
 
-/* Skill Section */
+/* =======================
+   Skills
+======================= */
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
@@ -155,16 +169,20 @@ header.hero::before {
   margin-bottom: 0.5rem;
   padding: 0.5rem;
   border-left: 4px solid #00ffe1;
-  transition: background 0.3s, border-color 0.3s;
+  transition: background 0.3s, border-color 0.3s, transform 0.3s;
 }
 
 .skill-category li:hover {
-  background-color: #ff4c4c;
+  transform: translateX(5px);
+  background: linear-gradient(90deg, #ff1a1a, #ff4c4c);
+  color: white;
   border-left-color: #ff1a1a;
   cursor: pointer;
 }
 
-/* Section Titles */
+/* =======================
+   Section Titles
+======================= */
 .section h2 {
   color: #00ffe1;
   border-bottom: 2px solid #222;
@@ -174,19 +192,26 @@ header.hero::before {
 
 #resume h2,
 #contact h2 {
+  font-size: 1.4rem;
   color: #ff4c4c;
+  margin-bottom: 0.75rem;
+  text-shadow: 0 0 6px rgba(255, 76, 76, 0.4);
 }
 
-/* Resume Button */
+/* =======================
+   Resume Button
+======================= */
 .resume-button {
   display: inline-block;
-  padding: 0.75rem 1.5rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
   background: linear-gradient(135deg, #ff4c4c, #ff1a1a);
   color: #fff;
-  font-weight: bold;
+  font-weight: 600;
   border: none;
-  border-radius: 8px;
-  text-decoration: none;
+  border-radius: 6px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
   transition: all 0.3s ease;
   box-shadow: 0 4px 12px rgba(255, 76, 76, 0.3);
 }
@@ -197,121 +222,65 @@ header.hero::before {
   box-shadow: 0 6px 16px rgba(255, 76, 76, 0.5);
 }
 
-/* Contact */
-.contact-info {
+/* =======================
+   Contact Section
+======================= */
+#contact .contact-info {
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 15px;
+  gap: 20px;
   flex-wrap: wrap;
-  color: #f2f2f2;
-  justify-content: flex-start;
+  margin-top: 15px;
 }
 
-.contact-info a {
-  color: #00ffe1;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.contact-info a:hover {
-  color: #00ff00;
-}
-
-.divider {
-  color: #888;
-  padding: 0 0.5rem;
+#contact .contact-info .divider {
+  color: #bbb;
+  font-size: 1.2rem;
   font-weight: bold;
 }
 
-.icon-img {
-  width: 20px;
-  height: 20px;
-  vertical-align: middle;
-  margin-right: 8px;
-  border-radius: 4px;
+#contact .contact-info a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+  cursor: pointer;
 }
 
-/* Footer */
+/* Gmail: red icon + red text */
+#contact .contact-info a.email,
+#contact .contact-info a.email i {
+  color: #d44638;
+}
+
+/* LinkedIn: blue icon + blue text */
+#contact .contact-info a.linkedin,
+#contact .contact-info a.linkedin i {
+  color: #0077b5;
+}
+
+/* Hover */
+#contact .contact-info a:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+/* =======================
+   Footer
+======================= */
 footer {
   text-align: center;
   padding: 1rem;
   background-color: #1a1a1a;
   color: #888;
 }
-/* Resume & Contact Headings (smaller size) */
-#resume h2,
-#contact h2 {
-  font-size: 1.4rem;
-  color: #ff4c4c;
-  margin-bottom: 0.75rem;
-  text-shadow: 0 0 6px rgba(255, 76, 76, 0.4);
-}
 
-/* Resume Button (smaller and more compact) */
-.resume-button {
-  padding: 0.4rem 0.9rem;
-  font-size: 0.9rem;
-  background: linear-gradient(135deg, #ff4c4c, #ff1a1a);
-  color: #fff;
-  font-weight: 500;
-  border: none;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  box-shadow: 0 3px 6px rgba(255, 76, 76, 0.3);
-}
-
-.resume-button:hover {
-  background: linear-gradient(135deg, #ff1a1a, #ff4c4c);
-  transform: scale(1.04);
-  box-shadow: 0 5px 10px rgba(255, 76, 76, 0.4);
-}
-
-/* Contact Info (smaller font and spacing) */
-.contact-info {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  align-items: center;
-  justify-content: flex-start;
-  font-size: 0.95rem;
-}
-
-.contact-info a {
-  color: #00ffe1;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.contact-info a:hover {
-  color: #00ff00;
-}
-.resume-button {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background: linear-gradient(135deg, #ff4c4c, #ff1a1a);
-  color: #fff;
-  font-weight: bold;
-  border: none;
-  border-radius: 8px;
-  text-decoration: underline; /* Underline ONLY the button */
-  text-underline-offset: 4px;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(255, 76, 76, 0.3);
-}
-html {
-  scroll-behavior: smooth;
-}
-.skill-category li:hover {
-  transform: translateX(5px);
-  background: linear-gradient(90deg, #ff1a1a, #ff4c4c);
-  color: white;
-}
-.contact-info a:hover img {
-  transform: scale(1.1);
-  filter: drop-shadow(0 0 5px #00ffe1);
-  transition: all 0.3s ease;
-}
+/* =======================
+   Responsive
+======================= */
 @media (max-width: 768px) {
   .hero-content h1 {
     font-size: 2rem;
@@ -326,77 +295,4 @@ html {
     width: 120px;
     height: 120px;
   }
-}
-/* Contact section */
-.contact-info {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px; /* spacing between items */
-  margin-top: 15px;
-  flex-wrap: wrap; /* mobile friendly */
-}
-
-/* Links */
-.contact-info a {
-  text-decoration: none;
-  font-size: 1.1rem;
-  display: flex;
-  align-items: center;
-  gap: 8px; /* space between icon and text */
-  transition: color 0.3s ease;
-  color: #fff; /* keep text white */
-}
-
-/* Divider */
-.contact-info .divider {
-  color: #bbb;
-  font-size: 1.2rem;
-}
-
-/* Icons default size */
-.contact-info i {
-  font-size: 1.3rem;
-}
-
-/* Gmail icon = red */
-.contact-info .email i {
-  color: #d14836;
-}
-
-/* LinkedIn icon = blue */
-.contact-info .linkedin i {
-  color: #0077b5;
-}
-
-/* Text hover glow */
-.contact-info a:hover {
-  color: #00e0ff; /* hover color for text */
-}
-/* Contact Section Icons */
-.contact-info a {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 1.1rem;
-  text-decoration: none;
-  color: #ffffff; /* default link color */
-  transition: color 0.3s ease;
-}
-
-/* Email icon color */
-.contact-info a.email i {
-  color: #d44638; /* Gmail red */
-  font-size: 1.3rem;
-}
-
-/* LinkedIn icon color */
-.contact-info a.linkedin i {
-  color: #0077b5; /* LinkedIn blue */
-  font-size: 1.3rem;
-}
-
-/* Hover effect */
-.contact-info a:hover {
-  color: #00e0ff; /* text hover glow */
 }
