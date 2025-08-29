@@ -41,8 +41,10 @@ header.hero {
 header.hero::before {
   content: "";
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: rgba(0, 0, 0, 0.4);
   z-index: 0;
 }
@@ -67,7 +69,7 @@ header.hero::before {
   color: #ccc;
 }
 
-/* Cursor animation */
+/* Cursor Animation */
 #cursor {
   color: #00ffe1;
   font-weight: bold;
@@ -223,49 +225,58 @@ html {
 }
 
 /* =======================
-   Contact Section
+   Contact Section (Optimized)
 ======================= */
 #contact .contact-info {
   display: flex;
-  justify-content: flex-start; /* push left */
   align-items: center;
+  justify-content: flex-start;
   gap: 20px;
-  flex-wrap: wrap;
   margin-top: 15px;
+  flex-wrap: wrap;
 }
 
+/* Contact Links */
+#contact .contact-info a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+/* Gmail Button */
+#contact .contact-info a.email {
+  color: #d44638;
+}
+#contact .contact-info a.email i {
+  color: #d44638;
+  font-size: 1.4rem;
+}
+
+/* LinkedIn Button */
+#contact .contact-info a.linkedin {
+  color: #0077b5;
+}
+#contact .contact-info a.linkedin i {
+  color: #0077b5;
+  font-size: 1.4rem;
+}
+
+/* Divider Styling */
 #contact .contact-info .divider {
   color: #bbb;
   font-size: 1.2rem;
   font-weight: bold;
 }
 
-#contact .contact-info a {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 1.1rem;
-  text-decoration: none;
-  transition: transform 0.15s ease, opacity 0.15s ease;
-  cursor: pointer;
-}
-
-/* Gmail: red icon + red text */
-#contact .contact-info a.email,
-#contact .contact-info a.email i {
-  color: #d44638;
-}
-
-/* LinkedIn: blue icon + blue text */
-#contact .contact-info a.linkedin,
-#contact .contact-info a.linkedin i {
-  color: #0077b5;
-}
-
-/* Hover */
+/* Hover Effects */
 #contact .contact-info a:hover {
   opacity: 0.85;
-  transform: translateY(-1px);
+  transform: scale(1.05);
 }
 
 /* =======================
@@ -279,7 +290,7 @@ footer {
 }
 
 /* =======================
-   Responsive
+   Responsive Design
 ======================= */
 @media (max-width: 768px) {
   .hero-content h1 {
@@ -295,50 +306,9 @@ footer {
     width: 120px;
     height: 120px;
   }
-}
-/* Contact Section Styling */
-.contact-info {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 20px;
-  margin-top: 15px;
-  flex-wrap: wrap;
-}
 
-/* Contact Links */
-.contact-info a {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 1.1rem;
-  text-decoration: none;
-  font-weight: 500;
-  color: #ffffff;
-  transition: color 0.3s ease, transform 0.2s ease;
-}
-
-/* Gmail Icon Color */
-.contact-info a.email i {
-  color: #D44638; /* Official Gmail Red */
-  font-size: 1.3rem;
-}
-
-/* LinkedIn Icon Color */
-.contact-info a.linkedin i {
-  color: #0077b5; /* Official LinkedIn Blue */
-  font-size: 1.3rem;
-}
-
-/* Hover Effect */
-.contact-info a:hover {
-  color: #00e0ff;
-  transform: scale(1.05);
-}
-
-/* Divider Styling */
-.contact-info .divider {
-  color: #888;
-  font-size: 1.3rem;
-  font-weight: bold;
+  #contact .contact-info {
+    justify-content: center;
+    text-align: center;
+  }
 }
