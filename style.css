@@ -234,7 +234,7 @@ html {
   margin-top: 15px;
 }
 
-/* Gmail Button */
+/* Gmail Link */
 #contact .contact-info a.email {
   display: inline-flex;
   align-items: center;
@@ -250,7 +250,7 @@ html {
   color: #d44638;
 }
 
-/* LinkedIn Button */
+/* LinkedIn Link */
 #contact .contact-info a.linkedin {
   display: inline-flex;
   align-items: center;
@@ -266,12 +266,13 @@ html {
   color: #0077b5;
 }
 
-/* Hover Effects */
+/* Hover Effect */
 #contact .contact-info a:hover {
   opacity: 0.85;
   transform: translateY(-1px);
 }
 
+/* Divider */
 #contact .contact-info .divider {
   color: #aaa;
   font-size: 1.2rem;
