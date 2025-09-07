@@ -273,10 +273,25 @@ html {
 /* Mobile Optimization */
 @media (max-width: 768px) {
   #contact .contact-info {
+    display: flex;
+    flex-direction: row; /* Keep Gmail & LinkedIn side by side */
     justify-content: center;
+    align-items: center;
+    gap: 20px; /* Space between icons */
     text-align: center;
+    flex-wrap: nowrap; /* Prevent stacking */
+  }
+
+  #contact .contact-info a {
+    font-size: 1rem; /* Adjust text size for mobile */
+    white-space: nowrap; /* Prevent text from breaking into two lines */
+  }
+
+  #contact .contact-info i {
+    font-size: 1.2rem; /* Proper icon size for mobile */
   }
 }
+
 footer {
   text-align: center;
   padding: 1rem;
