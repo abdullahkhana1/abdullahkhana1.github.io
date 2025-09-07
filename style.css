@@ -223,7 +223,6 @@ html {
   transform: scale(1.05);
   box-shadow: 0 6px 16px rgba(255, 76, 76, 0.5);
 }
-
 /* =======================
    Contact Section
 ======================= */
@@ -236,7 +235,6 @@ html {
   margin-top: 15px;
 }
 
-/* Common Contact Links */
 #contact .contact-info a {
   display: inline-flex;
   align-items: center;
@@ -244,21 +242,16 @@ html {
   font-size: 1.1rem;
   font-weight: 500;
   text-decoration: none;
+  color: #ffffff;
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-/* Gmail Styling */
-#contact .contact-info a.email,
-#contact .contact-info a.email i {
-  color: #d44638; /* Gmail Red */
-  font-size: 1.3rem;
-}
-
-/* LinkedIn Styling */
-#contact .contact-info a.linkedin,
-#contact .contact-info a.linkedin i {
-  color: #0077b5; /* LinkedIn Blue */
-  font-size: 1.3rem;
+/* Contact Icons */
+.contact-icon {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 /* Divider */
@@ -270,7 +263,7 @@ html {
 
 /* Hover Effect */
 #contact .contact-info a:hover {
-  opacity: 0.8;
+  opacity: 0.85;
   transform: scale(1.05);
 }
 
